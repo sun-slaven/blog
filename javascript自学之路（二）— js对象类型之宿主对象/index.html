@@ -1,0 +1,1761 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="路漫漫"><title>js对象类型之宿主对象 | Slaven的个人博客</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><script type="text/javascript" async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">js对象类型之宿主对象</h1><a id="logo" href="/.">Slaven的个人博客</a><p class="description">个人的技术、情感小天地</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">js对象类型之宿主对象</h1><div class="post-meta">Sep 23, 2015<span> | </span><span class="category"><a href="/categories/Javascript基础知识/">Javascript基础知识</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><a data-thread-key="javascript自学之路（二）— js对象类型之宿主对象/" href="/javascript自学之路（二）— js对象类型之宿主对象/#comments" class="ds-thread-count"></a><div class="post-content"><p><strong>Js中的宿主对象：</strong></p>
+<p><strong>包括浏览器中的window（BOM）和document（DOM）对象</strong></p>
+<h1 id="一、-nbsp-nbsp-DOM对象"><a href="#一、-nbsp-nbsp-DOM对象" class="headerlink" title="一、&nbsp;&nbsp;DOM对象"></a><strong>一、&nbsp;&nbsp;DOM对象</strong></h1><p><strong><span style="color:#cc0000">包括：Document、Element、Attribute、Event四大对象</span></strong></p>
+<h2 id="1-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Document"><a href="#1-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Document" class="headerlink" title="1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document"></a><strong>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document</strong></h2><p>每个载入浏览器的 HTML 文档都会成为 Document 对象。</p>
+<p>Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。<br><a id="more"></a><br><span style="color:red">提示：</span>Document对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong><span style="white-space:pre"></span>Document 对象属性</strong></p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" style="background:#F9F9F9"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>属性</strong></p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p><strong>描述</strong></p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><span style="color:#0D0D0D">body</span></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>提供对 &lt;body&gt; 元素的直接访问。</p>
+<p>对于定义了框架集的文档，该属性引用最外层的 &lt;frameset&gt;。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_doc_cookie.asp" target="_blank" rel="external"><span style="color:#00B0F0">cookie</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回与当前文档有关的所有 cookie。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_doc_domain.asp" target="_blank" rel="external"><span style="color:black">domain</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回当前文档的域名。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_doc_lastmodified.asp" target="_blank" rel="external"><span style="color:#0D0D0D">lastModified</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回文档被最后修改的日期和时间。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_doc_referrer.asp" target="_blank" rel="external"><span style="color:#0D0D0D">referrer</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回载入当前文档的文档的 URL。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_doc_title.asp" target="_blank" rel="external"><span style="color:#00B0F0">title</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回当前文档的标题。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_doc_url.asp" target="_blank" rel="external"><span style="color:#00B0F0; background:#D9D9D9">URL</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回当前文档的 URL。</p>
+<p></p></td><br><br><br><br><p></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Document 对象方法</strong></p>
+<table border="1" cellspacing="0" cellpadding="0" align="left" style="text-align:left; background:rgb(249,249,249)"><br><br><tbody><br><br><tr><br><br><td valign="bottom" style="background:#D5D5D5"><br><br><br><strong>方法</strong><br><br></td><br><br><td valign="bottom" style="background:#D5D5D5"><br><br><br><strong>描述</strong><br><br></td><br><br></tr><br><br><tr><br><br><td valign="top" style="background:#EFEFEF"><br><br><br><a href="http://www.w3school.com.cn/jsref/met_doc_close.asp" target="_blank" rel="external"><span style="color:#0D0D0D">close()</span></a><br><br></td><br><br><td valign="top" style="background:#EFEFEF"><br><br><br>关闭用 document.open() 方法打开的输出流，并显示选定的数据。<br><br></td><br><br></tr><br><br><tr><br><br><td valign="top" style="background:#EFEFEF"><br><br><br><a href="http://www.w3school.com.cn/jsref/met_doc_getelementbyid.asp" target="_blank" rel="external"><span style="color:#00B0F0">getElementById()</span></a><br><br></td><br><br><td valign="top" style="background:#EFEFEF"><br><br><br>返回对拥有指定 id 的第一个对象的引用。<br><br></td><br><br></tr><br><br><tr><br><br><td valign="top" style="background:#EFEFEF"><br><br><br><a href="http://www.w3school.com.cn/jsref/met_doc_getelementsbyname.asp" target="_blank" rel="external"><span style="color:#00B0F0">getElementsByName()</span></a><br><br></td><br><br><td valign="top" style="background:#EFEFEF"><br><br><br>返回带有指定名称的对象集合。<br><br></td><br><br></tr><br><br><tr><br><br><td nowrap="nowrap" valign="top" style="background:#EFEFEF"><br><br><br><a href="http://www.w3school.com.cn/jsref/met_doc_getelementsbytagname.asp" target="_blank" rel="external"><span style="color:#00B0F0">getElementsByTagName()</span></a><br><br></td><br><br><td valign="top" style="background:#EFEFEF"><br><br><br>返回带有指定标签名的对象集合。<br><br></td><br><br></tr><br><br><tr><br><br><td valign="top" style="background:#EFEFEF"><br><br><br><a href="http://www.w3school.com.cn/jsref/met_doc_open.asp" target="_blank" rel="external"><span style="color:#0D0D0D">open()</span></a><br><br></td><br><br><td valign="top" style="background:#EFEFEF"><br><br><br>打开一个流，以收集来自任何 document.write() 或 document.writeln() 方法的输出。<br><br></td><br><br></tr><br><br><tr><br><br><td valign="top" style="background:#EFEFEF"><br><br><br><a href="http://www.w3school.com.cn/jsref/met_doc_write.asp" target="_blank" rel="external"><span style="color:#00B0F0">write()</span></a><br><br></td><br><br><td valign="top" style="background:#EFEFEF"><br><br><br>向文档写 HTML 表达式 或 JavaScript 代码。<br><br></td><br><br></tr><br><br><tr><br><br><td valign="top" style="background:#EFEFEF"><br><br><br><a href="http://www.w3school.com.cn/jsref/met_doc_writeln.asp" target="_blank" rel="external"><span style="color:#900B09">writeln()</span></a><br><br></td><br><br><td valign="top" style="background:#EFEFEF"><br><br><br>等同于 write() 方法，不同的是在每个表达式之后写一个换行符。<br><br></td><br><br></tr><br><br></tbody><br><br></table>
+
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>&nbsp;</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<p>**</p>
+<h2 id="2-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Element"><a href="#2-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Element" class="headerlink" title="2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Element"></a><strong>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Element</strong></h2><blockquote>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先介绍结点node的概念：</p>
+<blockquote>
+<p>在 HTML DOM （文档对象模型）中，每个部分都是节点：</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文档本身是文档节点</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有 HTML 元素是元素节点</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有 HTML 属性是属性节点</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML 元素内的文本是文本节点</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注释是注释节点<br>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 再来看Element对象<br>在 HTML DOM 中，Element 对象表示 HTML 元素。</p>
+<p>Element 对象可以拥有类型为元素节点、文本节点、注释节点的子节点。</p>
+<p>NodeList 对象表示节点列表，比如 HTML 元素的子节点集合。</p>
+<p>下面的属性和方法可用于所有 HTML 元素上：</p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" style="background:#F9F9F9"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+</blockquote>
+<p><strong>属性 / 方法</strong></p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p><strong>描述</strong></p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_html_accesskey.asp" title="HTML DOM accessKey 属性" target="_blank" rel="external"><span style="color:#900B09">element.accessKey</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的快捷键。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_appendchild.asp" title="HTML DOM appendChild() 方法" target="_blank" rel="external"><span style="color:#900B09">element.appendChild()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>向元素添加新的子节点，作为最后一个子节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_attributes.asp" title="HTML DOM attributes 属性" target="_blank" rel="external"><span style="color:#900B09">element.attributes</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素属性的 NamedNodeMap。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_childnodes.asp" title="HTML DOM childNodes 属性" target="_blank" rel="external"><span style="color:#900B09">element.childNodes</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素子节点的 NodeList。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_html_classname.asp" title="HTML DOM className 属性" target="_blank" rel="external"><span style="color:#900B09">element.className</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的 class 属性。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.clientHeight</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的可见高度。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.clientWidth</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的可见宽度。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_clonenode.asp" title="HTML DOM cloneNode() 方法" target="_blank" rel="external"><span style="color:#900B09">element.cloneNode()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>克隆元素。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_comparedocumentposition.asp" title="HTML DOM compareDocumentPosition() 方法" target="_blank" rel="external"><span style="color:#900B09">element.compareDocumentPosition()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>比较两个元素的文档位置。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_html_contenteditable.asp" title="HTML DOM contentEditable 属性" target="_blank" rel="external"><span style="color:#900B09">element.contentEditable</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的文本方向。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_html_dir.asp" title="HTML DOM dir 属性" target="_blank" rel="external"><span style="color:#900B09">element.dir</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的文本方向。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_firstchild.asp" title="HTML DOM firstChild 属性" target="_blank" rel="external"><span style="color:#900B09">element.firstChild</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的首个子。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_element_getattribute.asp" title="HTML DOM getAttribute() 方法" target="_blank" rel="external"><span style="color:#900B09">element.getAttribute()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素节点的指定属性&#20540;。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_element_getattributenode.asp" title="HTML DOM getAttributeNode() 方法" target="_blank" rel="external"><span style="color:#900B09">element.getAttributeNode()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回指定的属性节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_element_getelementsbytagname.asp" title="HTML DOM getElementsByTagName() 方法" target="_blank" rel="external"><span style="color:#900B09">element.getElementsByTagName()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回拥有指定标签名的所有子元素的集合。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.getFeature()</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回实现了指定特性的 API 的某个对象。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.getUserData()</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回关联元素上键的对象。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_element_hasattribute.asp" title="HTML DOM hasAttribute() 方法" target="_blank" rel="external"><span style="color:#900B09">element.hasAttribute()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>如果元素拥有指定属性，则返回true，否则返回 false。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_hasattributes.asp" title="HTML DOM hasAttributes() 方法" target="_blank" rel="external"><span style="color:#900B09">element.hasAttributes()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>如果元素拥有属性，则返回 true，否则返回 false。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_haschildnodes.asp" title="HTML DOM hasChildNodes() 方法" target="_blank" rel="external"><span style="color:#900B09">element.hasChildNodes()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>如果元素拥有子节点，则返回 true，否则 false。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_html_id.asp" title="HTML DOM id 属性" target="_blank" rel="external"><span style="color:#900B09">element.id</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的 id。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_html_innerhtml.asp" title="HTML DOM innerHTML 属性" target="_blank" rel="external"><span style="color:#00B0F0">element.innerHTML</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的内容。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_insertbefore.asp" title="HTML DOM insertBefore() 方法" target="_blank" rel="external"><span style="color:#900B09">element.insertBefore()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>在指定的已有的子节点之前插入新节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_html_iscontenteditable.asp" title="HTML DOM isContentEditable 属性" target="_blank" rel="external"><span style="color:#900B09">element.isContentEditable</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的内容。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_isdefaultnamespace.asp" title="HTML DOM isDefaultNamespace() 方法" target="_blank" rel="external"><span style="color:#900B09">element.isDefaultNamespace()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>如果指定的 namespaceURI 是默认的，则返回 true，否则返回 false。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_isequalnode.asp" title="HTML DOM isEqualNode() 方法" target="_blank" rel="external"><span style="color:#900B09">element.isEqualNode()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>检查两个元素是否相等。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_issamenode.asp" title="HTML DOM isSameNode() 方法" target="_blank" rel="external"><span style="color:#900B09">element.isSameNode()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>检查两个元素是否是相同的节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_issupported.asp" title="HTML DOM isSupported() 方法" target="_blank" rel="external"><span style="color:#900B09">element.isSupported()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>如果元素支持指定特性，则返回 true。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_html_lang.asp" title="HTML DOM lang 属性" target="_blank" rel="external"><span style="color:#900B09">element.lang</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的语言代码。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_lastchild.asp" title="HTML DOM lastChild 属性" target="_blank" rel="external"><span style="color:#900B09">element.lastChild</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的最后一个子元素。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_namespaceuri.asp" title="HTML DOM namespaceURI 属性" target="_blank" rel="external"><span style="color:#900B09">element.namespaceURI</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的 namespace URI。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_nextsibling.asp" title="HTML DOM nextSibling 属性" target="_blank" rel="external"><span style="color:#900B09">element.nextSibling</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回位于相同节点树层级的下一个节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_nodename.asp" title="HTML DOM nodeName 属性" target="_blank" rel="external"><span style="color:#900B09">element.nodeName</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的名称。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_nodetype.asp" title="HTML DOM nodeType 属性" target="_blank" rel="external"><span style="color:#900B09">element.nodeType</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的节点类型。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_nodevalue.asp" title="HTML DOM nodeValue 属性" target="_blank" rel="external"><span style="color:#900B09">element.nodeValue</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素&#20540;。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_normalize.asp" title="HTML DOM normalize() 方法" target="_blank" rel="external"><span style="color:#900B09">element.normalize()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>合并元素中相邻的文本节点，并移除空的文本节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.offsetHeight</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的高度。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.offsetWidth</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的宽度。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.offsetLeft</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的水平偏移位置。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.offsetParent</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的偏移容器。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.offsetTop</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的垂直偏移位置。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_ownerdocument.asp" title="HTML DOM ownerDocument 属性" target="_blank" rel="external"><span style="color:#900B09">element.ownerDocument</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的根元素（文档对象）。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_parentnode.asp" title="HTML DOM parentNode 属性" target="_blank" rel="external"><span style="color:#900B09">element.parentNode</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的父节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_previoussibling.asp" title="HTML DOM previousSibling 属性" target="_blank" rel="external"><span style="color:#900B09">element.previousSibling</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回位于相同节点树层级的前一个元素。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_element_removeattribute.asp" title="HTML DOM removeAttribute() 方法" target="_blank" rel="external"><span style="color:#900B09">element.removeAttribute()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>从元素中移除指定属性。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_element_removeattributenode.asp" title="HTML DOM removeAttributeNode() 方法" target="_blank" rel="external"><span style="color:#900B09">element.removeAttributeNode()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>移除指定的属性节点，并返回被移除的节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_removechild.asp" title="HTML DOM removeChild() 方法" target="_blank" rel="external"><span style="color:#900B09">element.removeChild()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>从元素中移除子节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_node_replacechild.asp" title="HTML DOM replaceChild() 方法" target="_blank" rel="external"><span style="color:#900B09">element.replaceChild()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>替换元素中的子节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.scrollHeight</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的整体高度。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.scrollLeft</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素左边缘与视图之间的距离。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.scrollTop</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素上边缘与视图之间的距离。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.scrollWidth</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的整体宽度。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_element_setattribute.asp" title="HTML DOM setAttribute() 方法" target="_blank" rel="external"><span style="color:#900B09">element.setAttribute()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>把指定属性设置或更改为指定&#20540;。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_element_setattributenode.asp" title="HTML DOM setAttributeNode() 方法" target="_blank" rel="external"><span style="color:#900B09">element.setAttributeNode()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或更改指定属性节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.setIdAttribute()</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.setIdAttributeNode()</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.setUserData()</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>把对象关联到元素上的键。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.style</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的 style 属性。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_html_tabindex.asp" title="HTML DOM tabIndex 属性" target="_blank" rel="external"><span style="color:#900B09">element.tabIndex</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的 tab 键控制次序。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_element_tagname.asp" title="HTML DOM tagName 属性" target="_blank" rel="external"><span style="color:#900B09">element.tagName</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回元素的标签名。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_node_textcontent.asp" title="HTML DOM textContent 属性" target="_blank" rel="external"><span style="color:#900B09">element.textContent</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回节点及其后代的文本内容。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_html_title.asp" title="HTML DOM title 属性" target="_blank" rel="external"><span style="color:#900B09">element.title</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回元素的 title 属性。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>element.toString()</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>把元素转换为字符串。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_nodelist_item.asp" title="HTML DOM item() 方法" target="_blank" rel="external"><span style="color:#900B09">nodelist.item()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回 NodeList 中位于指定下标的节点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_nodelist_length.asp" title="HTML DOM length 属性" target="_blank" rel="external"><span style="color:#900B09">nodelist.length</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回 NodeList 中的节点数。</p>
+<p></p></td><br><br><br><br><p></p>
+<blockquote>
+<p><span style="color:red">总结：方法和属性大多是对于</span><span style="color:red">html</span><span style="color:red">元素（或者说是</span><span style="color:red">DOM</span><span style="color:red">结点）的遍历、设置、操作等。</span></p>
+</blockquote>
+<h2 id="3-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Attribute"><a href="#3-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Attribute" class="headerlink" title="3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attribute"></a><strong>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attribute</strong></h2><blockquote>
+<p>Attr 对象</p>
+<p>在 HTML DOM 中，Attr 对象表示 HTML 属性。</p>
+<p>HTML 属性始终属于 HTML 元素。</p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" style="background:#F9F9F9"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+<p><strong>属性 / 方法</strong></p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p><strong>描述</strong></p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_attr_isid.asp" title="HTML DOM isId 属性" target="_blank" rel="external"><span style="color:#900B09">attr.isId</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>如果属性是 id 类型，则返回 true，否则返回 false。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_attr_name.asp" title="HTML DOM name 属性" target="_blank" rel="external"><span style="color:#900B09">attr.name</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回属性的名称。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_attr_value.asp" title="HTML DOM value 属性" target="_blank" rel="external"><span style="color:#900B09">attr.value</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回属性的&#20540;。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_attr_specified.asp" title="HTML DOM specified 属性" target="_blank" rel="external"><span style="color:#900B09">attr.specified</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>如果已指定属性，则返回 true，否则返回 false。</p>
+<p></p></td><br><br><br><br><p></p>
+<p>&nbsp;</p>
+<h2 id="4-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Event"><a href="#4-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Event" class="headerlink" title="4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Event"></a><strong>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Event</strong></h2><blockquote>
+<p>Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态。</p>
+<p>事件通常与函数结合使用，函数不会在事件发生前被执行！</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>事件句柄　(Event Handlers)</strong></p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" width="407" style="background:#F9F9F9"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>属性</strong></p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p><strong>此事件发生在何时…</strong></p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onabort.asp" target="_blank" rel="external"><span style="color:#900B09">onabort</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>图像的加载被中断。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onblur.asp" target="_blank" rel="external"><span style="color:#900B09">onblur</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>元素失去焦点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onchange.asp" target="_blank" rel="external"><span style="color:#900B09">onchange</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>域的内容被改变。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onclick.asp" target="_blank" rel="external"><span style="color:#900B09">onclick</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>当用户点击某个对象时调用的事件句柄。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_ondblclick.asp" target="_blank" rel="external"><span style="color:#900B09">ondblclick</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>当用户双击某个对象时调用的事件句柄。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onerror.asp" target="_blank" rel="external"><span style="color:#900B09">onerror</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>在加载文档或图像时发生错误。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onfocus.asp" target="_blank" rel="external"><span style="color:#900B09">onfocus</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>元素获得焦点。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onkeydown.asp" target="_blank" rel="external"><span style="color:#900B09">onkeydown</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>某个键盘按键被按下。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onkeypress.asp" target="_blank" rel="external"><span style="color:#900B09">onkeypress</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>某个键盘按键被按下并松开。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onkeyup.asp" target="_blank" rel="external"><span style="color:#900B09">onkeyup</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>某个键盘按键被松开。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onload.asp" target="_blank" rel="external"><span style="color:#900B09">onload</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>一张页面或一幅图像完成加载。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onmousedown.asp" target="_blank" rel="external"><span style="color:#900B09">onmousedown</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>鼠标按钮被按下。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onmousemove.asp" target="_blank" rel="external"><span style="color:#900B09">onmousemove</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>鼠标被移动。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onmouseout.asp" target="_blank" rel="external"><span style="color:#900B09">onmouseout</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>鼠标从某元素移开。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onmouseover.asp" target="_blank" rel="external"><span style="color:#900B09">onmouseover</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>鼠标移到某元素之上。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onmouseup.asp" target="_blank" rel="external"><span style="color:#900B09">onmouseup</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>鼠标按键被松开。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onreset.asp" target="_blank" rel="external"><span style="color:#900B09">onreset</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>重置按钮被点击。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onresize.asp" target="_blank" rel="external"><span style="color:#900B09">onresize</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>窗口或框架被重新调整大小。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onselect.asp" target="_blank" rel="external"><span style="color:#900B09">onselect</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>文本被选中。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onsubmit.asp" target="_blank" rel="external"><span style="color:#900B09">onsubmit</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>确认按钮被点击。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_onunload.asp" target="_blank" rel="external"><span style="color:#900B09">onunload</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>用户退出页面。</p>
+<p></p></td><br><br><br><br><p></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp;&nbsp; 标准 Event 属性：</strong></p>
+<blockquote>
+<blockquote>
+<p><strong>下面列出了 2 级 DOM 事件标准定义的属性</strong>。</p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" width="378"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>属性</strong></p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p><strong>描述</strong></p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_bubbles.asp" target="_blank" rel="external"><span style="color:#900B09">bubbles</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回布尔&#20540;，指示事件是否是起泡事件类型。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_cancelable.asp" target="_blank" rel="external"><span style="color:#900B09">cancelable</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回布尔&#20540;，指示事件是否可拥可取消的默认动作。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_currenttarget.asp" target="_blank" rel="external"><span style="color:#900B09">currentTarget</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回其事件监听器触发该事件的元素。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_eventphase.asp" target="_blank" rel="external"><span style="color:#900B09">eventPhase</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回事件传播的当前阶段。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_target.asp" target="_blank" rel="external"><span style="color:#00B0F0">target</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回触发此事件的元素（事件的目标节点）。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_timestamp.asp" target="_blank" rel="external"><span style="color:#00B0F0">timeStamp</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回事件生成的日期和时间。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_type.asp" target="_blank" rel="external"><span style="color:#900B09">type</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回当前 Event 对象表示的事件的名称。</p>
+<p></p></td><br><br><br><br><p></p>
+<p>&nbsp;</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>标准 Event 方法：</strong></p>
+<p><strong>下面列出了 2 级 DOM 事件标准定义的方法。IE 的事件模型不支持这些方法：</strong></p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" width="378"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>方法</strong></p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p><strong>描述</strong></p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_initevent.asp" target="_blank" rel="external"><span style="color:#900B09">initEvent()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>初始化新创建的 Event 对象的属性。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_preventdefault.asp" target="_blank" rel="external"><span style="color:#00B0F0">preventDefault()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>通知浏览器不要执行与事件关联的默认动作。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td nowrap="nowrap" valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/event_stoppropagation.asp" target="_blank" rel="external"><span style="color:#00B0F0">stopPropagation()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>不再派发事件。</p>
+<p></p></td><br><br><br><br><p></p>
+<p>&nbsp;</p>
+<h1 id="二、-nbsp-nbsp-BOM对象"><a href="#二、-nbsp-nbsp-BOM对象" class="headerlink" title="二、&nbsp;&nbsp;BOM对象"></a><strong>二、&nbsp;&nbsp;BOM对象</strong></h1><p><strong>包括：Window、Navigator、Screen、History、Location五大对象</strong></p>
+<h2 id="1-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Window"><a href="#1-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Window" class="headerlink" title="1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Window"></a><strong>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Window</strong></h2><blockquote>
+<p>Window 对象表示浏览器中打开的窗口。</p>
+<p><span style="color:red">如果文档包含框架（</span><span style="color:red">frame </span><span style="color:red">或</span><span style="color:red"> iframe</span><span style="color:red">标签），浏览器会为</span><span style="color:red"> HTML</span></p>
+<p><span style="color:red">文档创建一个</span><span style="color:red"> window</span><span style="color:red">对象，并为每个框架创建一个额外的</span><span style="color:red"> window</span><span style="color:red">对象。</span></p>
+<p><span style="color:red">注释：</span>没有应用于 window 对象的公开标准，不过所有浏览器都支持该对象。</p>
+<p>&nbsp;</p>
+<p>Window 对象是全局对象，使用时直接使用它的属性和方法。Window 对象的 window 属性和 self 属性引用的都是它自己。当你想明确地引用当前窗口，而不仅仅是隐式地引用它时，可以使用这两个属性。</p>
+</blockquote>
+<p>&nbsp;</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Window 对象属性</strong></p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" width="378"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>属性</p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p>描述</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_closed.asp" target="_blank" rel="external"><span style="color:#900B09">closed</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回窗口是否已被关闭。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_defaultstatus.asp" target="_blank" rel="external"><span style="color:#900B09">defaultStatus</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回窗口状态栏中的默认文本。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/dom_obj_document.asp" target="_blank" rel="external"><span style="color:#00B0F0">document</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>对 Document 对象的只读引用。请参阅&nbsp;<a href="http://www.w3school.com.cn/jsref/dom_obj_document.asp" target="_blank" rel="external"><span style="color:#900B09">Document</span><span style="color:#900B09">对象</span></a>。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/dom_obj_history.asp" target="_blank" rel="external"><span style="color:#00B0F0">history</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>对 History 对象的只读引用。请参数&nbsp;<a href="http://www.w3school.com.cn/jsref/dom_obj_history.asp" target="_blank" rel="external"><span style="color:#900B09">History</span><span style="color:#900B09">对象</span></a>。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_innerheight_innerwidth.asp" target="_blank" rel="external"><span style="color:#900B09">innerheight</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回窗口的文档显示区的高度。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_innerheight_innerwidth.asp" target="_blank" rel="external"><span style="color:#900B09">innerwidth</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回窗口的文档显示区的宽度。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>length</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回窗口中的框架数量。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/dom_obj_location.asp" target="_blank" rel="external"><span style="color:#00B0F0">location</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>用于窗口或框架的 Location 对象。请参阅&nbsp;<a href="http://www.w3school.com.cn/jsref/dom_obj_location.asp" target="_blank" rel="external"><span style="color:#900B09">Location</span><span style="color:#900B09">对象</span></a>。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_name.asp" target="_blank" rel="external"><span style="color:#900B09">name</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回窗口的名称。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/dom_obj_navigator.asp" target="_blank" rel="external"><span style="color:#900B09">Navigator</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>对 Navigator 对象的只读引用。请参数&nbsp;<a href="http://www.w3school.com.cn/jsref/dom_obj_navigator.asp" target="_blank" rel="external"><span style="color:#900B09">Navigator</span><span style="color:#900B09">对象</span></a>。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_opener.asp" target="_blank" rel="external"><span style="color:#900B09">opener</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回对创建此窗口的窗口的引用。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_outerheight.asp" target="_blank" rel="external"><span style="color:#900B09">outerheight</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回窗口的外部高度。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_outerwidth.asp" target="_blank" rel="external"><span style="color:#900B09">outerwidth</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回窗口的外部宽度。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>pageXOffset</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回当前页面相对于窗口显示区左上角的 X 位置。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>pageYOffset</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回当前页面相对于窗口显示区左上角的 Y 位置。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>parent</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回父窗口。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/dom_obj_screen.asp" target="_blank" rel="external"><span style="color:#900B09">Screen</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>对 Screen 对象的只读引用。请参数&nbsp;<a href="http://www.w3school.com.cn/jsref/dom_obj_screen.asp" target="_blank" rel="external"><span style="color:#900B09">Screen</span><span style="color:#900B09">对象</span></a>。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_self.asp" target="_blank" rel="external"><span style="color:#900B09">self</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回对当前窗口的引用。等价于 Window 属性。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_status.asp" target="_blank" rel="external"><span style="color:#900B09">status</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置窗口状态栏的文本。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_win_top.asp" target="_blank" rel="external"><span style="color:#900B09">top</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回最顶层的先辈窗口。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>window</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>window 属性等价于 self 属性，它包含了对窗口自身的引用。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>screenLeft</p>
+<p>screenTop</p>
+<p>screenX</p>
+<p>screenY</p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>只读整数。声明了窗口的左上角在屏幕上的的 x 坐标和 y 坐标。IE、Safari 和 Opera 支持 screenLeft 和 screenTop，而 Firefox 和 Safari 支持 screenX 和 screenY。</p>
+<p></p></td><br><br><br><br><p></p>
+<p><span style="white-space:pre"></span><strong>Window 对象方法</strong></p>
+<div align="center"><br><table border="1" cellspacing="0" cellpadding="0" width="378"><br><tbody><br><tr><br><td valign="bottom" style="background:#D5D5D5"><br><br>方法<br><br></td><br><td valign="bottom" style="background:#D5D5D5"><br><br>描述<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_alert.asp" target="_blank" rel="external"><span style="color:#00B0F0">alert()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>显示带有一段消息和一个确认按钮的警告框。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_blur.asp" target="_blank" rel="external"><span style="color:#900B09">blur()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>把键盘焦点从顶层窗口移开。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_clearinterval.asp" target="_blank" rel="external"><span style="color:#00B0F0">clearInterval()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>取消由 setInterval() 设置的 timeout。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_cleartimeout.asp" target="_blank" rel="external"><span style="color:#00B0F0">clearTimeout()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>取消由 setTimeout() 方法设置的 timeout。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_close.asp" target="_blank" rel="external"><span style="color:#00B0F0">close()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>关闭浏览器窗口。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_confirm.asp" target="_blank" rel="external"><span style="color:#900B09">confirm()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>显示带有一段消息以及确认按钮和取消按钮的对话框。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_createpopup.asp" target="_blank" rel="external"><span style="color:#900B09">createPopup()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>创建一个 pop-up 窗口。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_focus.asp" target="_blank" rel="external"><span style="color:#900B09">focus()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>把键盘焦点给予一个窗口。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_moveby.asp" target="_blank" rel="external"><span style="color:#900B09">moveBy()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>可相对窗口的当前坐标把它移动指定的像素。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_moveto.asp" target="_blank" rel="external"><span style="color:#900B09">moveTo()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>把窗口的左上角移动到一个指定的坐标。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_open.asp" target="_blank" rel="external"><span style="color:#00B0F0">open()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>打开一个新的浏览器窗口或查找一个已命名的窗口。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_print.asp" target="_blank" rel="external"><span style="color:#900B09">print()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>打印当前窗口的内容。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_prompt.asp" target="_blank" rel="external"><span style="color:#900B09">prompt()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>显示可提示用户输入的对话框。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_resizeby.asp" target="_blank" rel="external"><span style="color:#900B09">resizeBy()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>按照指定的像素调整窗口的大小。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_resizeto.asp" target="_blank" rel="external"><span style="color:#00B0F0">resizeTo()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>把窗口的大小调整到指定的宽度和高度。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_scrollby.asp" target="_blank" rel="external"><span style="color:#900B09">scrollBy()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>按照指定的像素&#20540;来滚动内容。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_scrollto.asp" target="_blank" rel="external"><span style="color:#900B09">scrollTo()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>把内容滚动到指定的坐标。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_setinterval.asp" target="_blank" rel="external"><span style="color:#00B0F0">setInterval()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>按照指定的周期（以毫秒计）来调用函数或计算表达式。<br><br></td><br></tr><br><tr><br><td valign="top" style="background:#EFEFEF"><br><br><a href="http://www.w3school.com.cn/jsref/met_win_settimeout.asp" target="_blank" rel="external"><span style="color:#00B0F0">setTimeout()</span></a><br><br></td><br><td valign="top" style="background:#EFEFEF"><br><br>在指定的毫秒数后调用函数或计算表达式。<br><br></td><br></tr><br></tbody><br></table><br></div>
+
+<p>&nbsp;</p>
+<h2 id="2-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Navigator"><a href="#2-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Navigator" class="headerlink" title="2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Navigator"></a><strong>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Navigator</strong></h2><blockquote>
+<p>Navigator 对象包含有关浏览器的信息。</p>
+</blockquote>
+<h2 id="3-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Screen"><a href="#3-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Screen" class="headerlink" title="3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Screen"></a><strong>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Screen</strong></h2><blockquote>
+<p>Screen 对象包含有关客户端显示屏幕的信息。</p>
+</blockquote>
+<h2 id="4-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-History"><a href="#4-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-History" class="headerlink" title="4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;History"></a><strong>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;History</strong></h2><blockquote>
+<p>History 对象包含用户（在浏览器窗口中）访问过的 URL。</p>
+<p>History 对象是 window 对象的一部分，可通过 window.history 属性对其进行访问。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>History 对象属性</strong></p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" width="378"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>属性</p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p>描述</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_his_length.asp" target="_blank" rel="external"><span style="color:#900B09">length</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>返回浏览器历史列表中的 URL 数量。</p>
+<p></p></td><br><br><br><br><p></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>History 对象方法</strong></p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" width="378"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>方法</p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p>描述</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_his_back.asp" target="_blank" rel="external"><span style="color:#00B0F0">back()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>加载 history 列表中的前一个 URL。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_his_forward.asp" target="_blank" rel="external"><span style="color:#00B0F0">forward()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>加载 history 列表中的下一个 URL。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_his_go.asp" target="_blank" rel="external"><span style="color:#00B0F0">go()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>加载 history 列表中的某个具体页面。</p>
+<p></p></td><br><br><br><br><p></p>
+<p>&nbsp;</p>
+<h2 id="5-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Location"><a href="#5-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Location" class="headerlink" title="5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location"></a><strong>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location</strong></h2><blockquote>
+<p>Location对象包含有关当前 URL 的信息。</p>
+<p>Location对象是 Window 对象的一个部分，可通过 window.location 属性来访问。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Location 对象属性</strong></p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" width="378"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>属性</p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p>描述</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_loc_hash.asp" target="_blank" rel="external"><span style="color:#900B09">hash</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回从井号 (#) 开始的 URL（锚）。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_loc_host.asp" target="_blank" rel="external"><span style="color:#00B0F0">host</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回主机名和当前 URL 的端口号。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_loc_hostname.asp" target="_blank" rel="external"><span style="color:#00B0F0">hostname</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回当前 URL 的主机名。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_loc_href.asp" target="_blank" rel="external"><span style="color:#00B0F0">href</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回完整的 URL。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_loc_pathname.asp" target="_blank" rel="external"><span style="color:#00B0F0">pathname</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回当前 URL 的路径部分。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_loc_port.asp" target="_blank" rel="external"><span style="color:#00B0F0">port</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回当前 URL 的端口号。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_loc_protocol.asp" target="_blank" rel="external"><span style="color:#00B0F0">protocol</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回当前 URL 的协议。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/prop_loc_search.asp" target="_blank" rel="external"><span style="color:#900B09">search</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>设置或返回从问号 (?) 开始的 URL（查询部分）。</p>
+<p></p></td><br><br><br><br><p></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Location 对象方法</strong></p>
+<p><div align="center"></div></p>
+<p><table border="1" cellspacing="0" cellpadding="0" width="378"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+</td></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>属性</p>
+<p></p>
+<td valign="bottom" style="background:#D5D5D5">
+
+<p>描述</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_loc_assign.asp" target="_blank" rel="external"><span style="color:#900B09">assign()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>加载新的文档。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_loc_reload.asp" target="_blank" rel="external"><span style="color:#900B09">reload()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>重新加载当前文档。</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p><a href="http://www.w3school.com.cn/jsref/met_loc_replace.asp" target="_blank" rel="external"><span style="color:#900B09">replace()</span></a></p>
+<p></p></td><p></p>
+<td valign="top" style="background:#EFEFEF">
+
+<p>用新的文档替换当前文档。</p>
+<p></p></td><br><br><br><br><p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 可以使用window.location.href=”newurl”改变地址栏的地址并跳转。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 注：以上的所有的属性和方法中被蓝色标注的为较为常见的内容。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong><span style="color:#ff0000">附：BOM对象、DOM对象以及元素对象的关系图</span></strong></p>
+<p><img src="" alt=""></p>
+<pre><code>&lt;div&gt;
+    作者：z893196569 发表于2015/9/23 19:37:16 [原文链接](http://blog.csdn.net/z893196569/article/details/48685701)
+&lt;/div&gt;
+&lt;div&gt;
+阅读：67 评论：0 [查看评论](http://blog.csdn.net/z893196569/article/details/48685701#comments)
+&lt;/div&gt;
+</code></pre></div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://sunwenfeng.com/javascript自学之路（二）— js对象类型之宿主对象/" data-id="ciz9uvui1000grrz6ybeau8fj" class="article-share-link">分享到</a><div class="tags"><a href="/tags/js宿主对象/">js宿主对象</a></div><div class="post-nav"><a href="/javascript自学之路（三）— js对象类型之本地对象/" class="pre">js对象类型之本地对象</a><a href="/javascript自学之路（一）— js数据类型/" class="next">js数据类型</a></div><div data-thread-key="javascript自学之路（二）— js对象类型之宿主对象/" data-title="js对象类型之宿主对象" data-url="http://sunwenfeng.com/javascript自学之路（二）— js对象类型之宿主对象/" class="ds-share flat"><div class="ds-share-inline"><ul class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0);" class="ds-more">分享到：</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">腾讯微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li></ul><div class="ds-share-icons-more"></div></div></div><div data-thread-key="javascript自学之路（二）— js对象类型之宿主对象/" data-title="js对象类型之宿主对象" data-url="http://sunwenfeng.com/javascript自学之路（二）— js对象类型之宿主对象/" data-author-key="1" class="ds-thread"></div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://sunwenfeng.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript基础知识/">Javascript基础知识</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具技巧/">工具技巧</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术书籍笔记/">技术书籍笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/prototype/" style="font-size: 15px;">prototype</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/Hibernate/" style="font-size: 15px;">Hibernate</a> <a href="/tags/js宿主对象/" style="font-size: 15px;">js宿主对象</a> <a href="/tags/js本地对象/" style="font-size: 15px;">js本地对象</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/《你不知道的JavaScript》/">《你不知道的JavaScript》</a></li><li class="post-list-item"><a class="post-list-link" href="/linux操作的一些记录/">linux操作的一些记录</a></li><li class="post-list-item"><a class="post-list-link" href="/git操作的一些记录/">git操作的一些记录</a></li><li class="post-list-item"><a class="post-list-link" href="/hexo页面性能优化/">hexo页面性能优化</a></li><li class="post-list-item"><a class="post-list-link" href="/对养儿防老和门当户对的一点感慨/">对养儿防老和门当户对的一点感慨</a></li><li class="post-list-item"><a class="post-list-link" href="/javascript自学之路（四）— js对象类型之prototype属性的探索/">js对象类型之prototype属性的探索</a></li><li class="post-list-item"><a class="post-list-link" href="/javascript自学之路（三）— js对象类型之本地对象/">js对象类型之本地对象</a></li><li class="post-list-item"><a class="post-list-link" href="/javascript自学之路（二）— js对象类型之宿主对象/">js对象类型之宿主对象</a></li><li class="post-list-item"><a class="post-list-link" href="/javascript自学之路（一）— js数据类型/">js数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/JavaSE-国际化-、-struts2封装国际化、jQuery插件国际化/">JavaSE 国际化 、 struts2封装国际化、jQuery插件国际化</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer"><div>本站总访问量<span id="busuanzi_value_site_pv"></span>次, 总访客数<span id="busuanzi_value_site_uv"></span>人</div><div>© <a href="/." rel="nofollow">Slaven的个人博客.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>var duoshuoQuery = {short_name:'sunwenfeng'};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
