@@ -1,9 +1,9 @@
 ---
 title: 'js数据类型'
 tags:
-- js数据类型
+-
 categories:
-- javascript
+- Javascript基础知识
 date: 2015-09-23 19:09:37
 ---
 

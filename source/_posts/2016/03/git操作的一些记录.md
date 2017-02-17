@@ -4,7 +4,7 @@ date: 2016-03-26 00:09:38
 tags:
 - git
 categories:
-- 工具
+- 工具技巧
 ---
 在cd到某一个目录下时,往往是git clone "URL",
 也可以是

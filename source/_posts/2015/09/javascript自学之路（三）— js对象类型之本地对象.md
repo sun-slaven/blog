@@ -1,9 +1,9 @@
 ---
 title: 'js对象类型之本地对象'
 tags:
-- js对象
+- js本地对象
 categories:
-- javascript
+- Javascript基础知识
 date: 2015-09-26 16:08:14
 ---
 

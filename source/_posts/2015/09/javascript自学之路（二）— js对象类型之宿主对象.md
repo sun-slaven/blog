@@ -1,9 +1,9 @@
 ---
 title: 'js对象类型之宿主对象'
 tags:
-- js对象
+- js宿主对象
 categories:
-- javascript
+- Javascript基础知识
 date: 2015-09-23 19:37:16
 ---
 

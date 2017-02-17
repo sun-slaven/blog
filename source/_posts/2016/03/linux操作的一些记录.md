@@ -2,9 +2,9 @@
 title: linux操作的一些记录
 date: 2016-03-26 00:28:36
 tags:
-- linux
+- 
 categories:
-- linux
+- Linux
 ---
 ##### 1. 递归删除指定目录下的.git文件
 ```

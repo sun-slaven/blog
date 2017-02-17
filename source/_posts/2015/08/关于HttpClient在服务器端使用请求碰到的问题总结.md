@@ -1,10 +1,9 @@
 ---
 title: '关于HttpClient在服务器端使用请求碰到的问题总结'
 tags:
-- HttpClient
-- java
+-
 categories:
-- java
+- Java
 date: 2015-08-12 11:21:04
 ---
 ```
@@ -59,4 +58,3 @@ public static HttpEntity connectForResult(String url) {
 2.	在作为静态方法时，由于使用的都是同一个client对象，所以不能在finally中写对资源的关闭，否则下一次调用就会报流关闭的错。写一个静态方法专门用于关闭资源
 
 3. 网上说的对response.getEntity() 得到的entity对象的长度有1k长度的限制 是错的，一开始也是受这个误导查了很多资料都没找出问题。
-

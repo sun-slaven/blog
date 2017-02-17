@@ -1,6 +1,9 @@
 ---
-title: '[原]JavaSE 国际化 、 struts2封装国际化、jQuery插件国际化'
-tags: []
+title: 'JavaSE 国际化 、 struts2封装国际化、jQuery插件国际化'
+tags:
+-
+categories:
+- Java
 date: 2015-09-08 13:12:18
 ---
 
@@ -8,17 +11,17 @@ date: 2015-09-08 13:12:18
 
 * * *
 
-**一、    Java 国际化** 
+**一、    Java 国际化**
 
 **1\.    步骤：**
 
-> 1)    定义国际化资源文件 
-> 
->   2)    根据软件的语言环境取得对应的资源文件 
-> 
+> 1)    定义国际化资源文件
+>
+>   2)    根据软件的语言环境取得对应的资源文件
+>
 >   3)    根据key取得对应的资源文件的对应字段的value值
 
-**2\.    知识内容** 
+**2\.    知识内容**
 
 1)  Java程序的国际化主要通过如下3个类完成
 
@@ -35,17 +38,17 @@ date: 2015-09-08 13:12:18
              baseName_language<span class="hljs-preprocessor">.properties</span>
              baseName<span class="hljs-preprocessor">.properties</span>`</pre>
 
-    其中baseName是资源文件的基本名称，用户可以自由定义，而language和country都不可随意变化，必须是Java所支持的语言和国家。 
+    其中baseName是资源文件的基本名称，用户可以自由定义，而language和country都不可随意变化，必须是Java所支持的语言和国家。
 
-    **3\.    示例** 
+    **3\.    示例**
 
-    《1》首先编写两个资源文件，例如： 
+    《1》首先编写两个资源文件，例如：
 
-                          resource_zh_CN.properties： title=标题 
+                          resource_zh_CN.properties： title=标题
 
                    resource_en_US.properties：title=title    
 
-    《2》中文的可以使用jdk的native2ascii 命令进行转码Unicode编码。 
+    《2》中文的可以使用jdk的native2ascii 命令进行转码Unicode编码。
 
               命令： native2ascii resource_zh_CN..properties  teme.properties然后在将转好的编码拷贝替换到resource_zh_CN.properties,替换后是：title=\u6807\u9898
 
@@ -67,15 +70,15 @@ date: 2015-09-08 13:12:18
 
     《3》Java国际化包含占位符的消息  
 
-    以上在资源文件配置的消息都是简单的消息，假如消息中含有参数，即有参数占位，我们 
+    以上在资源文件配置的消息都是简单的消息，假如消息中含有参数，即有参数占位，我们
 
     如何实现呢？例如下面消息：
 
     > 英文：hello=Hello,{0}!Today is {1}.  
-> 
+>
 >       中文：hello=你好，{0}!今天是{1}.
 
-    此时，我们需要使用MessageFormat类，该类有个很有用的静态的方法 
+    此时，我们需要使用MessageFormat类，该类有个很有用的静态的方法
 
     **format(String pattern,value1，value2…)**  
 
@@ -99,17 +102,17 @@ date: 2015-09-08 13:12:18
 
     * * *
 
-    **二、    struts2封装国际化** 
+    **二、    struts2封装国际化**
 
     Struts 2国际化是建立在Java国际化的基础之上，一样也是通过提供不同国家/语言环境的消息资源，然后通过ResourceBundle加载指定Locale对应的资源文件，再取得该资源文件中指定key对应的消息—整个过程与Java程序的国际化完全相同，只是Struts2框架对Java程序国际化进行了进一步封装，从而简化了应用程序的国际化。
 
     > 1)定义国际化资源文件  
-> 
+>
 >       2)在struts2.xml中配置常量  
-> 
+>
 >       3)在页面中通过struts标签获取资源文件里的值
 
-    **1)    定义国际化资源文件的格式** 
+    **1)    定义国际化资源文件的格式**
 
     有两种定义格式：
 
@@ -118,13 +121,13 @@ date: 2015-09-08 13:12:18
 
     **2)    在struts2.xml中配置常量**
 
-    > `&lt;constant name="struts.custom.i18n.resources" value="package" /&gt;` 
-> 
+    > `&lt;constant name="struts.custom.i18n.resources" value="package" /&gt;`
+>
 >       `&lt;constant name="struts.custom.i18n.resources" value="global" /&gt;`
 
-    即启用全局和所有包下的i18n的资源文件。两者之间不冲突。 
+    即启用全局和所有包下的i18n的资源文件。两者之间不冲突。
 
-    **3)    在页面中设置local变量** 
+    **3)    在页面中设置local变量**
 
     往往在登陆页面给用户选择一个语言环境。
 
@@ -149,7 +152,7 @@ date: 2015-09-08 13:12:18
             <span class="hljs-tag">&lt;<span class="hljs-title">s:submit</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">key</span>=<span class="hljs-value">"xx"</span> /&gt;</span>  
             <span class="hljs-tag">&lt;/<span class="hljs-title">s:form</span>&gt;</span>`</pre>
 
-    4.`&lt;s:property value="getText('xx')"/&gt;` 
+    4.`&lt;s:property value="getText('xx')"/&gt;`
 
      5\. 指定properties文件
 
@@ -157,7 +160,7 @@ date: 2015-09-08 13:12:18
         <span class="hljs-tag">&lt;<span class="hljs-title">s:text</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"xx"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">s:text</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">s:i18n</span>&gt;</span>`</pre>
 
-    b）在Action类中使用国际化消息 
+    b）在Action类中使用国际化消息
 
     使用ActionSupport类的getText方法,该方法可以接受一个name 参数,该参数指定了国际化资源文件中的key
 
@@ -181,13 +184,13 @@ date: 2015-09-08 13:12:18
             }  
     }  `</pre>
 
-    c)  参数化国际化字符串 （带有占位符） 
+    c)  参数化国际化字符串 （带有占位符）
 
-    许多情况下，我们都需要在运行时（runtime）为国际化字符插入一些参数，例如在输入验证提示信息的时候。在Struts 2.0中，我们通过可以方便地做到这点。 
+    许多情况下，我们都需要在运行时（runtime）为国际化字符插入一些参数，例如在输入验证提示信息的时候。在Struts 2.0中，我们通过可以方便地做到这点。
 
     **测试：**
 
-    带占位符的国际化信息 
+    带占位符的国际化信息
 
         welcomeTip=欢迎，{0},您已经登陆成功！
 
@@ -199,7 +202,7 @@ date: 2015-09-08 13:12:18
                 <span class="hljs-tag">&lt;<span class="hljs-title">s:param</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">s:property</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"username"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">s:param</span>&gt;</span>  
              <span class="hljs-tag">&lt;/<span class="hljs-title">s:text</span>&gt;</span>`</pre>
 
-    《2》.如果需要在Action中填充国际化消息里的占位符，则可以通过在调用getText方法时使用getText（String aTextName,List args）或getText(String key, String[] args)方法来填充 
+    《2》.如果需要在Action中填充国际化消息里的占位符，则可以通过在调用getText方法时使用getText（String aTextName,List args）或getText(String key, String[] args)方法来填充
 
     占位符。该方法的第二个参数既可以是一个字符串数组，也可以是字符串组成的List对象，从而完成对占位符，字符串数组、字符串集合中第二个元素将填充第二个占位符，依此类推。
 
@@ -350,7 +353,7 @@ date: 2015-09-08 13:12:18
 
     * * *
 
-    **三、    jQuery实现国际化** 
+    **三、    jQuery实现国际化**
 
     **jQuery.i18n.properties** 是一款轻量级的 jQuery 国际化插件。与 Java 里的资源文件类似，jQuery.i18n.properties 采用 .properties 文件对 JavaScript 进行国际化。
 
@@ -358,21 +361,21 @@ date: 2015-09-08 13:12:18
 
     jQuery.i18n.properties 的 API 非常简单，只有少数几个 API，即 jQuery.i18n.properties()、jQuery.i18n.prop()、jQuery.i18n.browserLang()。当然，和其他 jQuery 插件一样，我们也可以采用 <span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-1-Frame" class="MathJax"><nobr><span style="width: 10.617em; display: inline-block;" id="MathJax-Span-1" class="math"><span style="display: inline-block; position: relative; width: 8.618em; height: 0px; font-size: 123%;"><span style="position: absolute; clip: rect(1.368em, 1000em, 2.743em, -0.41em); top: -2.331em; left: 0em;"><span id="MathJax-Span-2" class="mrow"><span style="font-family: MathJax_Main;" id="MathJax-Span-3" class="mo">.</span><span style="font-family: MathJax_Math; font-style: italic; padding-left: 0.167em;" id="MathJax-Span-4" class="mi">i</span><span style="font-family: MathJax_Main;" id="MathJax-Span-5" class="mn">18</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-6" class="mi">n</span><span style="font-family: MathJax_Main;" id="MathJax-Span-7" class="mo">.</span><span style="font-family: MathJax_Math; font-style: italic; padding-left: 0.167em;" id="MathJax-Span-8" class="mi">p</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-9" class="mi">r</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-10" class="mi">o</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-11" class="mi">p</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-12" class="mi">e</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-13" class="mi">r</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-14" class="mi">t</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-15" class="mi">i</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-16" class="mi">e</span><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-17" class="mi">s</span><span style="font-family: MathJax_Main;" id="MathJax-Span-18" class="mo">(</span><span style="font-family: MathJax_Main;" id="MathJax-Span-19" class="mo">)</span><span id="MathJax-Span-20" class="texatom"><span id="MathJax-Span-21" class="mrow"><span id="MathJax-Span-22" class="mo"><span style="font-family: STIXGeneral,&quot;Arial Unicode MS&quot;,serif; font-size: 81%; font-style: normal; font-weight: normal;">、</span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.331em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.425em; vertical-align: -0.374em;"></span></span></nobr></span><script id="MathJax-Element-1" type="math/tex">.i18n.properties()、</script>.i18n.prop() 和 $.i18n.browserLang() 的形式使用这用这些 API。
 
-    **1\.    jQuery.i18n.properties(settings)** 
+    **1\.    jQuery.i18n.properties(settings)**
 
-    该方法加载资源文件，其中 settings 是配置加载选项的一系列键值对，各配置项的具体描述请查阅下面贴出的网址。 
+    该方法加载资源文件，其中 settings 是配置加载选项的一系列键值对，各配置项的具体描述请查阅下面贴出的网址。
 
     示例：
 
-    <pre class="prettyprint">`jQuery.i18n.properties({ 
+    <pre class="prettyprint">`jQuery.i18n.properties({
         name:<span class="hljs-string">'strings'</span>,<span class="hljs-comment">// 资源文件名称</span>
         path:<span class="hljs-string">'bundle/'</span>,<span class="hljs-comment">// 资源文件所在目录路径</span>
         mode:<span class="hljs-string">'both'</span>,<span class="hljs-comment">// 模式：变量或 Map </span>
         language:<span class="hljs-string">'pt_PT'</span>,<span class="hljs-comment">// 对应的语言</span>
-        cache:<span class="hljs-literal">false</span>, 
-        encoding: <span class="hljs-string">'UTF-8'</span>, 
+        cache:<span class="hljs-literal">false</span>,
+        encoding: <span class="hljs-string">'UTF-8'</span>,
         callback: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span><span class="hljs-comment">// 回调方法</span>
-        } 
+        }
      });
 
 **2\. jQuery.i18n.prop(key)**

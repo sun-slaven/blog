@@ -1,9 +1,9 @@
 ---
 title: 'java的动态绑定与静态绑定[转]'
 tags:
-- java
+-
 categories:
-- java
+- Java
 date: 2015-06-20 19:50:13
 ---
 
@@ -77,7 +77,7 @@ public class Son extends Father {
 　　public void method() {
 　　　 System.out.println("子类方法，对象类型:" + this.getClass());
 　　}
-  
+
 　　public static void main(String[] args) {
 　　　 Father sample = new Son();//向上转型
 　　　 sample.method();
