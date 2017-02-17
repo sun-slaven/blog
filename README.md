@@ -13,10 +13,10 @@ npm install
 git clone maupassant
 ```
 
-并将maupassant_clone下的配置文件覆盖。
+并将maupassant的配置文件覆盖。
 
 ```
+hexo new [new blog name]
 hexo g #创建public文件
 hexo s #启动本地server调试
-hexo d #部署到github，若失败，要进行 npm install hexo-deployer-git --save
-hexo g -d #创建并部署
+hexo g -d #创建并部署.若失败，要进行 npm install hexo-deployer-git --save
