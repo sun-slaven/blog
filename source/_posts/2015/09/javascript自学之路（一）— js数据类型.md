@@ -3,7 +3,7 @@ title: 'js数据类型'
 tags:
 -
 categories:
-- Javascript基础知识
+- Javascript
 date: 2015-09-23 19:09:37
 ---
 

@@ -5,7 +5,7 @@ updated: 2016-03-23 13:51:50
 tags:
 - prototype
 catagories:
-- Javascript基础知识
+- Javascript
 ---
 
 <span style="color:#ff0000">本篇尚未写完，初步排版</span>

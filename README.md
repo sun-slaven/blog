@@ -13,7 +13,9 @@ npm install
 git clone maupassant
 ```
 
-并将maupassant的配置文件覆盖。
+并将主题的配置文件覆盖。
+
+最后将images目录下的图片放在七牛云上
 
 ```
 hexo new [new blog name]
