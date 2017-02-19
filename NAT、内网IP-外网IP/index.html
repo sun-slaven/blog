@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="路漫漫"><title>NAT、内网IP/外网IP | Slaven的个人博客</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><script type="text/javascript" async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">NAT、内网IP/外网IP</h1><a id="logo" href="/.">Slaven的个人博客</a><p class="description">个人的技术、情感小天地</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">NAT、内网IP/外网IP</h1><div class="post-meta">Feb 19, 2017<span> | </span><span class="category"><a href="/categories/计算机网络/">计算机网络</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><a data-thread-key="NAT、内网IP-外网IP/" href="/NAT、内网IP-外网IP/#comments" class="ds-thread-count"></a><div class="post-content"><p>NAT（Network Address Translation，网络地址转换）是1994年提出的。当在专用网内部的一些主机本来已经分配到了本地IP地址（即仅在本专用网内使用的专用地址），但现在又想和因特网上的主机通信（并不需要加密）时，可使用NAT方法。</p>
+<p>这种方法需要在专用网连接到因特网的路由器上安装NAT软件。装有NAT软件的路由器叫做NAT路由器，它至少有一个有效的外部全球IP地址。这样，所有使用本地地址的主机在和外界通信时，都要在NAT路由器上将其本地地址转换成全球IP地址，才能和因特网连接。</p>
+<p>另外，这种通过使用少量的公有IP 地址代表较多的私有IP 地址的方式，将有助于减缓可用的IP地址空间的枯竭.</p>
+<p>NAT不仅能解决了lP地址不足的问题，而且还能够有效地避免来自网络外部的攻击，隐藏并保护网络内部的计算机。</p>
+<ol>
+<li>宽带分享：这是 NAT 主机的最大功能。</li>
+<li>安全防护：NAT 之内的 PC 联机到 Internet 上面时，他所显示的 IP 是 NAT 主机的公共 IP，所以 Client 端的 PC 当然就具有一定程度的安全了，外界在进行 portscan（端口扫描） 的时候，就侦测不到源Client 端的 PC</li>
+</ol>
+<p>NAT的实现方式有三种，即静态转换Static Nat、动态转换Dynamic Nat和端口多路复用OverLoad。</p>
+<p>静态转换是指将内部网络的私有IP地址转换为公有IP地址，IP地址对是一对一的，是一成不变的，某个私有IP地址只转换为某个公有IP地址。借助于静态转换，可以实现外部网络对内部网络中某些特定设备（如服务器）的访问。</p>
+<p>动态转换是指将内部网络的私有IP地址转换为公用IP地址时，IP地址是不确定的，是随机的，所有被授权访问上Internet的私有IP地址可随机转换为任何指定的合法IP地址。也就是说，只要指定哪些内部地址可以进行转换，以及用哪些合法地址作为外部地址时，就可以进行动态转换。动态转换可以使用多个合法外部地址集。当ISP提供的合法IP地址略少于网络内部的计算机数量时。可以采用动态转换的方式。</p>
+<p>端口多路复用（Port address Translation,PAT)是指改变外出数据包的源端口并进行端口转换，即端口地址转换（PAT，Port Address Translation).采用端口多路复用方式。内部网络的所有主机均可共享一个合法外部IP地址实现对Internet的访问，从而可以最大限度地节约IP地址资源。同时，又可隐藏网络内部的所有主机，有效避免来自internet的攻击。因此，目前网络中应用最多的就是端口多路复用方式。</p>
+<p>路由以里的叫内网,内网则是一定范围内的局域网，企业网、校园网、家庭网。<br>路由以外的叫外网。</p>
+<p>内网IP呢 就是你自己分配给机器的 “身份证”，这个身份证只在你家有效。 出门人家不认。</p>
+<p>外网IP呢 就是INTERNET国际互联网分配给你的 “身份证”，这个证件全球唯一任何地方有效。<br>在内网对路由器以外的访问 都需要将内网地址转换成外网地址(NAT)进行传输。</p>
+<p>从外部访问，是找到你外网IP传到你的路由上 。然后 由你路由负责转发到内部地址上。</p>
+<p>在以下范围内的都是内网IP，路由器若碰到内网IP直接丢弃。：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">10<span class="selector-class">.0</span><span class="selector-class">.0</span><span class="selector-class">.0-10</span><span class="selector-class">.255</span><span class="selector-class">.255</span><span class="selector-class">.255</span></div><div class="line">172<span class="selector-class">.16</span><span class="selector-class">.0</span><span class="selector-class">.0-172</span><span class="selector-class">.31</span><span class="selector-class">.255</span><span class="selector-class">.255</span></div><div class="line">192<span class="selector-class">.168</span><span class="selector-class">.0</span><span class="selector-class">.0-192</span><span class="selector-class">.168</span><span class="selector-class">.255</span><span class="selector-class">.255</span></div></pre></td></tr></table></figure></p>
+<p>通过ifconfig查看的ip地址都是内网IP。</p>
+<p>NAT转换表存储于网关上。<br>NAT地址转换表：<br>192.168.0.3和192.168.0.7为内网本地地址；<br>172.38.1.5和172.38.1.6均为NAT路由器的公网IP地址.<br>出和入一一对应</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方向</th>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">旧的IP地址</th>
+<th style="text-align:center">新的IP地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">出</td>
+<td style="text-align:center">源IP地址</td>
+<td style="text-align:center">192.168.0.3</td>
+<td style="text-align:center">172.38.1.5</td>
+</tr>
+<tr>
+<td style="text-align:center">入</td>
+<td style="text-align:center">目的IP地址</td>
+<td style="text-align:center">172.38.1.5</td>
+<td style="text-align:center">192.168.0.3</td>
+</tr>
+<tr>
+<td style="text-align:center">出</td>
+<td style="text-align:center">源IP地址</td>
+<td style="text-align:center">192.168.0.7</td>
+<td style="text-align:center">172.38.1.6</td>
+</tr>
+<tr>
+<td style="text-align:center">入</td>
+<td style="text-align:center">目的IP地址</td>
+<td style="text-align:center">172.38.1.6</td>
+<td style="text-align:center">192.168.0.7</td>
+</tr>
+</tbody>
+</table>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://sunwenfeng.com/NAT、内网IP-外网IP/" data-id="cizcfytgw001cnlz6rw7fm8ha" class="article-share-link">分享到</a><div class="tags"><a href="/tags/NAT/">NAT</a></div><div class="post-nav"><a href="/ARP协议/" class="pre">ARP协议</a><a href="/《你不知道的JavaScript》/" class="next">《你不知道的JavaScript》</a></div><div data-thread-key="NAT、内网IP-外网IP/" data-title="NAT、内网IP/外网IP" data-url="http://sunwenfeng.com/NAT、内网IP-外网IP/" class="ds-share flat"><div class="ds-share-inline"><ul class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0);" class="ds-more">分享到：</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">腾讯微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li></ul><div class="ds-share-icons-more"></div></div></div><div data-thread-key="NAT、内网IP-外网IP/" data-title="NAT、内网IP/外网IP" data-url="http://sunwenfeng.com/NAT、内网IP-外网IP/" data-author-key="1" class="ds-thread"></div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://sunwenfeng.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript基础知识/">Javascript基础知识</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具技巧/">工具技巧</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术书籍笔记/">技术书籍笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机网络/">计算机网络</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/ARP/" style="font-size: 15px;">ARP</a> <a href="/tags/Hibernate/" style="font-size: 15px;">Hibernate</a> <a href="/tags/js宿主对象/" style="font-size: 15px;">js宿主对象</a> <a href="/tags/prototype/" style="font-size: 15px;">prototype</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/js本地对象/" style="font-size: 15px;">js本地对象</a> <a href="/tags/DHCP/" style="font-size: 15px;">DHCP</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/ICMP/" style="font-size: 15px;">ICMP</a> <a href="/tags/NAT/" style="font-size: 15px;">NAT</a> <a href="/tags/OSI模型/" style="font-size: 15px;">OSI模型</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/网段、子网判定/">网段、子网判定</a></li><li class="post-list-item"><a class="post-list-link" href="/HTTP、HTTPS/">HTTP、HTTPS</a></li><li class="post-list-item"><a class="post-list-link" href="/DHCP协议/">DHCP协议</a></li><li class="post-list-item"><a class="post-list-link" href="/OSI模型、网络架构/">OSI模型、网络架构</a></li><li class="post-list-item"><a class="post-list-link" href="/ICMP协议/">ICMP协议</a></li><li class="post-list-item"><a class="post-list-link" href="/网络通信过程理解/">网络通信过程理解</a></li><li class="post-list-item"><a class="post-list-link" href="/网卡、集线器、网桥、交换机、路由器的区别/">网卡、集线器、网桥、交换机、路由器的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/ARP协议/">ARP协议</a></li><li class="post-list-item"><a class="post-list-link" href="/NAT、内网IP-外网IP/">NAT、内网IP/外网IP</a></li><li class="post-list-item"><a class="post-list-link" href="/《你不知道的JavaScript》/">《你不知道的JavaScript》</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer"><div>本站总访问量<span id="busuanzi_value_site_pv"></span>次, 总访客数<span id="busuanzi_value_site_uv"></span>人</div><div>© <a href="/." rel="nofollow">Slaven的个人博客.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>var duoshuoQuery = {short_name:'sunwenfeng'};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
