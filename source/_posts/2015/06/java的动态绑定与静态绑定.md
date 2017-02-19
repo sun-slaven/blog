@@ -1,9 +1,9 @@
 ---
-title: 'java的动态绑定与静态绑定[转]'
+title: 'java的动态绑定与静态绑定'
 tags:
 -
 categories:
-- Java
+- java
 date: 2015-06-20 19:50:13
 ---
 

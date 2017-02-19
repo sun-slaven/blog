@@ -3,7 +3,7 @@ title: javascript原型
 tags:
   - prototype
 categories:
-  - Javascript
+  - javascript
 date: 2017-02-19 17:24:52
 ---
 function A(){};

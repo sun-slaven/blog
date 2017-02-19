@@ -3,7 +3,7 @@ title: '关于HttpClient在服务器端使用请求碰到的问题总结'
 tags:
 -
 categories:
-- Java
+- java
 date: 2015-08-12 11:21:04
 ---
 ```

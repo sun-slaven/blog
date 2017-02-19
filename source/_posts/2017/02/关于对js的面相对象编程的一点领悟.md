@@ -3,7 +3,7 @@ title: 关于对js的面相对象编程的一点领悟
 tags:
   - js面向对象编程
 categories:
-  - Javascript
+  - javascript
 date: 2017-02-19 17:21:08
 ---
 一开始，程序员是直接通过new Object()来创建一个对象，再后来就是通过字面量形式定义好所有的对象上的属性和方法

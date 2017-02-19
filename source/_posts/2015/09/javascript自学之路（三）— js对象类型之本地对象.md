@@ -3,7 +3,7 @@ title: 'js对象类型之本地对象'
 tags:
 - js本地对象
 categories:
-- Javascript
+- javascript
 date: 2015-09-26 16:08:14
 ---
 
